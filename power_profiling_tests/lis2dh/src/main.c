@@ -89,14 +89,14 @@ void main(void)
 
 		printf("Waiting for triggers\n");
 		while (true) {
-			k_sleep(K_MSEC(2000));
+			k_sleep(K_MSEC(1000));
 		}
 	}
 #else /* CONFIG_LIS2DH_TRIGGER */
 	printf("Polling at 0.5 Hz\n");
 	while (true) {
 		fetch_and_display(sensor);
-		k_sleep(K_MSEC(2000));
+		k_sleep(K_MSEC(1000));
 	}
 #endif /* CONFIG_LIS2DH_TRIGGER */
 }
